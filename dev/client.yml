@@ -1,0 +1,13 @@
+services:
+  discord-message-store-client:
+    build: ./discord-message-store-client
+    pull_policy: build
+    develop:
+      watch:
+        - path: ./discord-message-store-client/client/
+          target: /client/client
+          action: sync+restart
+        - path: ./discord-message-store-client/pyproject.toml
+          action: rebuild
+        - path: ./discord-message-store-client/poetry.lock
+          action: rebuild

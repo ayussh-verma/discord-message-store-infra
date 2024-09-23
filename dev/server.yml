@@ -1,0 +1,16 @@
+services:
+  discord-message-store-server:
+    build: ./discord-message-store
+    pull_policy: build
+    develop:
+      watch:
+        - path: ./discord-message-store/src/main/
+          action: rebuild
+        - path: ./discord-message-store/pom.xml
+          action: rebuild
+        # Enable the following if you want to run tests
+        # - path: ./discord-message-store/src/main/test/
+        #   action: rebuild
+    environment:
+      SPRING_PROFILES_ACTIVE: dev,override
+      DISC_MSG_STORE_SERVER_PORT: 80

@@ -1,0 +1,8 @@
+services:
+  postgres:
+    ports:
+      - "5500:5432"
+
+  discord-message-store-server:
+    ports:
+      - "8100:80"
