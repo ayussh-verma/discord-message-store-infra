@@ -2,6 +2,7 @@ services:
   discord-message-store-client:
     build: ./discord-message-store-client
     pull_policy: build
+    restart: "no"
     develop:
       watch:
         - path: ./discord-message-store-client/client/
