@@ -1,0 +1,6 @@
+services:
+  discord-message-store-client:
+    volumes:
+      - type: bind
+        source: /etc/ssl/certs
+        target: /etc/ssl/certs
