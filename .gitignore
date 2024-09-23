@@ -1,0 +1,5 @@
+discord-message-store-client/
+discord-message-store/
+*.env
+compose.override.yml
+compose.check.yml
